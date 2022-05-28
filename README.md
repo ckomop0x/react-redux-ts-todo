@@ -18,11 +18,11 @@
 
 As a bonus :
 
-- [x] I decided to write there are 3 tests: unit for function, unit for React component, integration for React component
-- [x] State persists during reloads with help of LocalStorage
+- [x] There are 3 tests – unit for function, unit for React component, integration for React component
+- [x] State persistent during reloads with the help of LocalStorage
 - [x] App deployed to Netlify
 - [x] Code coverage is published to Codecov
-- [x] GitHooks to apply consistent code quality
+- [x] GitHooks to applied every commit and push for consistent code quality
 
 ## Available Scripts
 
