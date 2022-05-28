@@ -50,6 +50,14 @@
   "resolutions": {
     "styled-components": "^5"
   },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx,json,csgis,md}": [
+      "prettier --config ./.prettierrc --write"
+    ],
+    "*.{ts,tsx}": [
+      "eslint -c ./.eslintrc.js --fix"
+    ]
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
