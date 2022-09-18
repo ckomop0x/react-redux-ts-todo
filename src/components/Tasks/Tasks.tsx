@@ -9,11 +9,16 @@ import { TasksWrapper } from './styles';
 
 const Tasks = () => {
   const tasks: TaskInterface[] = useSelector((state: State) => state.tasks);
+  const incompleteTasks = tasks.filter(task => !task.isCompleted);
+  const completedTasks = tasks.filter(task => task.isCompleted);
 
   return (
     <TasksWrapper>
       <TasksInput />
-      <TasksList tasks={tasks} />
+      <h2>Incomplete</h2>
+      <TasksList tasks={incompleteTasks} />
+      <h2>Completed</h2>
+      <TasksList tasks={completedTasks} />
     </TasksWrapper>
   );
 };

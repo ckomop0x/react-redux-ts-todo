@@ -24,7 +24,7 @@ export const tasksSlice = createSlice({
 
       if (!currentTask) return;
 
-      const currentTaskIndex = currentTask && state.tasks.indexOf(currentTask);
+      const currentTaskIndex = state.tasks.indexOf(currentTask);
 
       state.tasks = [
         ...state.tasks.slice(0, currentTaskIndex),
@@ -35,6 +35,16 @@ export const tasksSlice = createSlice({
 
     deleteTask(state: State, action: PayloadAction<{ id: string }>) {
       state.tasks = state.tasks.filter(task => task.id !== action.payload.id);
+    },
+    deleteAllTasks(state: State) {
+      state.tasks = [];
+    },
+    sortTasksByName(state: State): void {
+      const sortedTasks = [...state.tasks].sort((a, b) => a.title.localeCompare(b.title));
+      state = {
+        ...state,
+        tasks: sortedTasks,
+      };
     },
   },
 });

@@ -13,6 +13,7 @@ import saveState from 'utils/store/saveState';
 store.subscribe(() => saveState(store.getState(), STORE_NAME));
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+
 root.render(
   <React.StrictMode>
     <Provider store={store}>

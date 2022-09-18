@@ -38,12 +38,22 @@ const TasksInput = () => {
     setIsSubmittable(!!currentTitle.trim());
   };
 
+  const deleteClickHandler = (): void => {
+    dispatch(tasksActions.deleteAllTasks());
+  };
+
+  const sortClickHandler = (): void => {
+    dispatch(tasksActions.sortTasksByName());
+  };
+
   return (
     <TasksInputWrapper onSubmit={submitHandler}>
       <Input placeholder="Add your tasks" onChange={inputChangeHandler} value={title} />
       <Button type="submit" disabled={!isSubmittable}>
         Add
       </Button>
+      <Button onClick={deleteClickHandler}>Delete all</Button>
+      <Button onClick={sortClickHandler}>Sort Tasks</Button>
     </TasksInputWrapper>
   );
 };
