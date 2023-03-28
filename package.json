@@ -30,7 +30,7 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
     "@typescript-eslint/parser": "^5.56.0",
     "@types/styled-components": "^5.1.26",
     "eslint-config-prettier": "^8.8.0",
